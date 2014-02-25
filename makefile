@@ -2,5 +2,5 @@
 # LICENSE for details.
 
 # Generates the code for the package from the templates
-ghostlice.go: allTypes.go genCode.sh
-	bash genCode.sh > $@
+ghostlice.go: genCode.sh allTypes.gotemplate
+	bash $^ > $@
