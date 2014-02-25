@@ -1,7 +1,10 @@
 // Copyright (c) 2014 Aubrey Barnard.  This is free software.  See
 // LICENSE for details.
 
-// This file is a template and not meant to be used directly.
+// This file contains templates for all the functions that are
+// applicable to all of the (comparable) numeric types.  This file is
+// not meant to be used directly and hence omits any package
+// declaration.
 
 // MinATypes finds the minimum of a slice of ATypes and its index
 func MinATypes(nums ...AType) (min AType, index int) {

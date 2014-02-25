@@ -24,7 +24,7 @@ for numType in $numTypes; do
     # whether the type name follows what could be an identifier.  Remove
     # the header lines from the input so as not to repeat them in the
     # output.
-    sed -e "s/\([^[:alnum:]_]\)AType/\1$numType/g" -e "s/AType/$upNumType/g" <(tail -n +6 allTypes.go)
+    tail -n +9 allTypes.go | sed -e "s/\([^[:alnum:]_]\)AType/\1$numType/g" -e "s/AType/$upNumType/g"
 done
 # Output the code specific to int types (none yet) (intTypes.go)
 # Output the code specific to float types (none yet) (fltTypes.go)
