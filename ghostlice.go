@@ -39,6 +39,8 @@ func MinMaxUint8s(nums ...uint8) (min, max uint8, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -132,6 +134,8 @@ func MinMaxUint16s(nums ...uint16) (min, max uint16, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -225,6 +229,8 @@ func MinMaxUint32s(nums ...uint32) (min, max uint32, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -318,6 +324,8 @@ func MinMaxUint64s(nums ...uint64) (min, max uint64, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -411,6 +419,8 @@ func MinMaxUints(nums ...uint) (min, max uint, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -504,6 +514,8 @@ func MinMaxInt8s(nums ...int8) (min, max int8, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -597,6 +609,8 @@ func MinMaxInt16s(nums ...int16) (min, max int16, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -690,6 +704,8 @@ func MinMaxInt32s(nums ...int32) (min, max int32, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -783,6 +799,8 @@ func MinMaxInt64s(nums ...int64) (min, max int64, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -876,6 +894,8 @@ func MinMaxInts(nums ...int) (min, max int, minIndex, maxIndex int) {
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -969,6 +989,8 @@ func MinMaxFloat32s(nums ...float32) (min, max float32, minIndex, maxIndex int) 
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
@@ -1062,6 +1084,8 @@ func MinMaxFloat64s(nums ...float64) (min, max float64, minIndex, maxIndex int) 
 	if len(nums) == 0 {
 		return
 	}
+	min = nums[0]
+	max = nums[0]
 	for i := 1; i < len(nums); i++ {
 		if nums[i] < min {
 			min = nums[i]
