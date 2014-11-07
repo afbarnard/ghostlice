@@ -100,6 +100,17 @@ func FindUint8(value uint8, nums ...uint8) (index int, found bool) {
 	return
 }
 
+// Float64sFromUint8s makes a slice of float64s by converting a slice of
+// uint8s
+func Float64sFromUint8s(nums ...uint8) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinUint16s finds the minimum of a slice of uint16s and its index
 func MinUint16s(nums ...uint16) (min uint16, index int) {
 	if len(nums) == 0 {
@@ -193,6 +204,17 @@ func FindUint16(value uint16, nums ...uint16) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromUint16s makes a slice of float64s by converting a slice of
+// uint16s
+func Float64sFromUint16s(nums ...uint16) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }
@@ -294,6 +316,17 @@ func FindUint32(value uint32, nums ...uint32) (index int, found bool) {
 	return
 }
 
+// Float64sFromUint32s makes a slice of float64s by converting a slice of
+// uint32s
+func Float64sFromUint32s(nums ...uint32) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinUint64s finds the minimum of a slice of uint64s and its index
 func MinUint64s(nums ...uint64) (min uint64, index int) {
 	if len(nums) == 0 {
@@ -387,6 +420,17 @@ func FindUint64(value uint64, nums ...uint64) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromUint64s makes a slice of float64s by converting a slice of
+// uint64s
+func Float64sFromUint64s(nums ...uint64) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }
@@ -488,6 +532,17 @@ func FindUint(value uint, nums ...uint) (index int, found bool) {
 	return
 }
 
+// Float64sFromUints makes a slice of float64s by converting a slice of
+// uints
+func Float64sFromUints(nums ...uint) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinInt8s finds the minimum of a slice of int8s and its index
 func MinInt8s(nums ...int8) (min int8, index int) {
 	if len(nums) == 0 {
@@ -581,6 +636,17 @@ func FindInt8(value int8, nums ...int8) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromInt8s makes a slice of float64s by converting a slice of
+// int8s
+func Float64sFromInt8s(nums ...int8) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }
@@ -682,6 +748,17 @@ func FindInt16(value int16, nums ...int16) (index int, found bool) {
 	return
 }
 
+// Float64sFromInt16s makes a slice of float64s by converting a slice of
+// int16s
+func Float64sFromInt16s(nums ...int16) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinInt32s finds the minimum of a slice of int32s and its index
 func MinInt32s(nums ...int32) (min int32, index int) {
 	if len(nums) == 0 {
@@ -775,6 +852,17 @@ func FindInt32(value int32, nums ...int32) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromInt32s makes a slice of float64s by converting a slice of
+// int32s
+func Float64sFromInt32s(nums ...int32) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }
@@ -876,6 +964,17 @@ func FindInt64(value int64, nums ...int64) (index int, found bool) {
 	return
 }
 
+// Float64sFromInt64s makes a slice of float64s by converting a slice of
+// int64s
+func Float64sFromInt64s(nums ...int64) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinInts finds the minimum of a slice of ints and its index
 func MinInts(nums ...int) (min int, index int) {
 	if len(nums) == 0 {
@@ -969,6 +1068,17 @@ func FindInt(value int, nums ...int) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromInts makes a slice of float64s by converting a slice of
+// ints
+func Float64sFromInts(nums ...int) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }
@@ -1070,6 +1180,17 @@ func FindFloat32(value float32, nums ...float32) (index int, found bool) {
 	return
 }
 
+// Float64sFromFloat32s makes a slice of float64s by converting a slice of
+// float32s
+func Float64sFromFloat32s(nums ...float32) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+
 // MinFloat64s finds the minimum of a slice of float64s and its index
 func MinFloat64s(nums ...float64) (min float64, index int) {
 	if len(nums) == 0 {
@@ -1163,6 +1284,17 @@ func FindFloat64(value float64, nums ...float64) (index int, found bool) {
 		if v == value {
 			return i, true
 		}
+	}
+	return
+}
+
+// Float64sFromFloat64s makes a slice of float64s by converting a slice of
+// float64s
+func Float64sFromFloat64s(nums ...float64) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
 	}
 	return
 }

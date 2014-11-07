@@ -36,6 +36,7 @@ Features
 * Fill
 * Equality (with first differing index)
 * Find
+* Conversion (unchecked) to float64 from other types
 
 
 Future

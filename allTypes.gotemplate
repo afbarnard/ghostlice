@@ -102,3 +102,15 @@ func FindAType(value AType, nums ...AType) (index int, found bool) {
 	}
 	return
 }
+
+// Float64sFromATypes makes a slice of float64s by converting a slice of
+// ATypes
+func Float64sFromATypes(nums ...AType) (floats []float64) {
+	length := len(nums)
+	floats = make([]float64, length)
+	for i := 0; i < length; i++ {
+		floats[i] = float64(nums[i])
+	}
+	return
+}
+

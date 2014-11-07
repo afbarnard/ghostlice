@@ -132,3 +132,15 @@ func Test_FindInt(t *T) {
 		}
 	}
 }
+
+func Test_Float64sFromInts(t *T) {
+	testData := [][]int{emptyInts, ints[:7]}
+	expected := [][]float64{{}, {2.0, -64.0, 93.0, -38.0, 33.0, 82.0, 67.0}}
+	for test := 0; test < len(testData); test++ {
+		floats := Float64sFromInts(testData[test]...)
+		equal, index := EqualFloat64s(expected[test], floats)
+		if !equal {
+			t.Errorf("Float64s not equal in test %v, element %v: expected %v != %v", test, index, expected[test][index], floats[index])
+		}
+	}
+}
