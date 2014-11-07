@@ -91,10 +91,10 @@ func EqualUint8s(nums1, nums2 []uint8) (equal bool, index int) {
 
 // FindUint8 returns the first index of the given value in the slice of
 // uint8s
-func FindUint8(value uint8, nums ...uint8) (index int, found bool) {
+func FindUint8(value uint8, nums ...uint8) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -199,10 +199,10 @@ func EqualUint16s(nums1, nums2 []uint16) (equal bool, index int) {
 
 // FindUint16 returns the first index of the given value in the slice of
 // uint16s
-func FindUint16(value uint16, nums ...uint16) (index int, found bool) {
+func FindUint16(value uint16, nums ...uint16) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -307,10 +307,10 @@ func EqualUint32s(nums1, nums2 []uint32) (equal bool, index int) {
 
 // FindUint32 returns the first index of the given value in the slice of
 // uint32s
-func FindUint32(value uint32, nums ...uint32) (index int, found bool) {
+func FindUint32(value uint32, nums ...uint32) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -415,10 +415,10 @@ func EqualUint64s(nums1, nums2 []uint64) (equal bool, index int) {
 
 // FindUint64 returns the first index of the given value in the slice of
 // uint64s
-func FindUint64(value uint64, nums ...uint64) (index int, found bool) {
+func FindUint64(value uint64, nums ...uint64) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -523,10 +523,10 @@ func EqualUints(nums1, nums2 []uint) (equal bool, index int) {
 
 // FindUint returns the first index of the given value in the slice of
 // uints
-func FindUint(value uint, nums ...uint) (index int, found bool) {
+func FindUint(value uint, nums ...uint) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -631,10 +631,10 @@ func EqualInt8s(nums1, nums2 []int8) (equal bool, index int) {
 
 // FindInt8 returns the first index of the given value in the slice of
 // int8s
-func FindInt8(value int8, nums ...int8) (index int, found bool) {
+func FindInt8(value int8, nums ...int8) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -739,10 +739,10 @@ func EqualInt16s(nums1, nums2 []int16) (equal bool, index int) {
 
 // FindInt16 returns the first index of the given value in the slice of
 // int16s
-func FindInt16(value int16, nums ...int16) (index int, found bool) {
+func FindInt16(value int16, nums ...int16) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -847,10 +847,10 @@ func EqualInt32s(nums1, nums2 []int32) (equal bool, index int) {
 
 // FindInt32 returns the first index of the given value in the slice of
 // int32s
-func FindInt32(value int32, nums ...int32) (index int, found bool) {
+func FindInt32(value int32, nums ...int32) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -955,10 +955,10 @@ func EqualInt64s(nums1, nums2 []int64) (equal bool, index int) {
 
 // FindInt64 returns the first index of the given value in the slice of
 // int64s
-func FindInt64(value int64, nums ...int64) (index int, found bool) {
+func FindInt64(value int64, nums ...int64) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -1063,10 +1063,10 @@ func EqualInts(nums1, nums2 []int) (equal bool, index int) {
 
 // FindInt returns the first index of the given value in the slice of
 // ints
-func FindInt(value int, nums ...int) (index int, found bool) {
+func FindInt(value int, nums ...int) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -1171,10 +1171,10 @@ func EqualFloat32s(nums1, nums2 []float32) (equal bool, index int) {
 
 // FindFloat32 returns the first index of the given value in the slice of
 // float32s
-func FindFloat32(value float32, nums ...float32) (index int, found bool) {
+func FindFloat32(value float32, nums ...float32) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
@@ -1279,10 +1279,10 @@ func EqualFloat64s(nums1, nums2 []float64) (equal bool, index int) {
 
 // FindFloat64 returns the first index of the given value in the slice of
 // float64s
-func FindFloat64(value float64, nums ...float64) (index int, found bool) {
+func FindFloat64(value float64, nums ...float64) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return

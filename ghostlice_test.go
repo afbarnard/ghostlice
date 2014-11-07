@@ -120,15 +120,15 @@ func Test_EqualInts(t *T) {
 func Test_FindInt(t *T) {
 	testData := [][]int{emptyInts, ints[:1], ints[:1], ints, ints, ints}
 	targets := []int{363, 2, -880, -67, 38, 1}
-	expectedIndexes := []int{0, 0, 0, 32, 10, 0}
 	expectedFounds := []bool{false, true, false, true, true, false}
+	expectedIndexes := []int{0, 0, 0, 32, 10, 0}
 	for test := 0; test < len(testData); test++ {
-		index, found := FindInt(targets[test], testData[test]...)
-		if index != expectedIndexes[test] {
-			t.Errorf("Wrong index in test %v: expected %v != %v", targets[test], expectedIndexes[test], index)
-		}
+		found, index := FindInt(targets[test], testData[test]...)
 		if found != expectedFounds[test] {
 			t.Errorf("Wrong found in test %v: expected %v != %v", targets[test], expectedFounds[test], found)
+		}
+		if index != expectedIndexes[test] {
+			t.Errorf("Wrong index in test %v: expected %v != %v", targets[test], expectedIndexes[test], index)
 		}
 	}
 }

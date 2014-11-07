@@ -94,10 +94,10 @@ func EqualATypes(nums1, nums2 []AType) (equal bool, index int) {
 
 // FindAType returns the first index of the given value in the slice of
 // ATypes
-func FindAType(value AType, nums ...AType) (index int, found bool) {
+func FindAType(value AType, nums ...AType) (found bool, index int) {
 	for i, v := range nums {
 		if v == value {
-			return i, true
+			return true, i
 		}
 	}
 	return
