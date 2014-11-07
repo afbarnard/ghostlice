@@ -74,17 +74,19 @@ func FillUint8s(nums []uint8, value uint8) {
 }
 
 // EqualUint8s compares two slices of uint8s for equality of contents
-func EqualUint8s(nums1, nums2 []uint8) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualUint8s(nums1, nums2 []uint8) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindUint8 returns the first index of the given value in the slice of
@@ -169,17 +171,19 @@ func FillUint16s(nums []uint16, value uint16) {
 }
 
 // EqualUint16s compares two slices of uint16s for equality of contents
-func EqualUint16s(nums1, nums2 []uint16) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualUint16s(nums1, nums2 []uint16) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindUint16 returns the first index of the given value in the slice of
@@ -264,17 +268,19 @@ func FillUint32s(nums []uint32, value uint32) {
 }
 
 // EqualUint32s compares two slices of uint32s for equality of contents
-func EqualUint32s(nums1, nums2 []uint32) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualUint32s(nums1, nums2 []uint32) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindUint32 returns the first index of the given value in the slice of
@@ -359,17 +365,19 @@ func FillUint64s(nums []uint64, value uint64) {
 }
 
 // EqualUint64s compares two slices of uint64s for equality of contents
-func EqualUint64s(nums1, nums2 []uint64) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualUint64s(nums1, nums2 []uint64) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindUint64 returns the first index of the given value in the slice of
@@ -454,17 +462,19 @@ func FillUints(nums []uint, value uint) {
 }
 
 // EqualUints compares two slices of uints for equality of contents
-func EqualUints(nums1, nums2 []uint) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualUints(nums1, nums2 []uint) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindUint returns the first index of the given value in the slice of
@@ -549,17 +559,19 @@ func FillInt8s(nums []int8, value int8) {
 }
 
 // EqualInt8s compares two slices of int8s for equality of contents
-func EqualInt8s(nums1, nums2 []int8) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualInt8s(nums1, nums2 []int8) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindInt8 returns the first index of the given value in the slice of
@@ -644,17 +656,19 @@ func FillInt16s(nums []int16, value int16) {
 }
 
 // EqualInt16s compares two slices of int16s for equality of contents
-func EqualInt16s(nums1, nums2 []int16) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualInt16s(nums1, nums2 []int16) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindInt16 returns the first index of the given value in the slice of
@@ -739,17 +753,19 @@ func FillInt32s(nums []int32, value int32) {
 }
 
 // EqualInt32s compares two slices of int32s for equality of contents
-func EqualInt32s(nums1, nums2 []int32) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualInt32s(nums1, nums2 []int32) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindInt32 returns the first index of the given value in the slice of
@@ -834,17 +850,19 @@ func FillInt64s(nums []int64, value int64) {
 }
 
 // EqualInt64s compares two slices of int64s for equality of contents
-func EqualInt64s(nums1, nums2 []int64) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualInt64s(nums1, nums2 []int64) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindInt64 returns the first index of the given value in the slice of
@@ -929,17 +947,19 @@ func FillInts(nums []int, value int) {
 }
 
 // EqualInts compares two slices of ints for equality of contents
-func EqualInts(nums1, nums2 []int) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualInts(nums1, nums2 []int) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindInt returns the first index of the given value in the slice of
@@ -1024,17 +1044,19 @@ func FillFloat32s(nums []float32, value float32) {
 }
 
 // EqualFloat32s compares two slices of float32s for equality of contents
-func EqualFloat32s(nums1, nums2 []float32) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualFloat32s(nums1, nums2 []float32) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindFloat32 returns the first index of the given value in the slice of
@@ -1119,17 +1141,19 @@ func FillFloat64s(nums []float64, value float64) {
 }
 
 // EqualFloat64s compares two slices of float64s for equality of contents
-func EqualFloat64s(nums1, nums2 []float64) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualFloat64s(nums1, nums2 []float64) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindFloat64 returns the first index of the given value in the slice of

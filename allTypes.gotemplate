@@ -77,17 +77,19 @@ func FillATypes(nums []AType, value AType) {
 }
 
 // EqualATypes compares two slices of ATypes for equality of contents
-func EqualATypes(nums1, nums2 []AType) (equal bool) {
+// and returns the index of the first difference or -1 if the lengths
+// differ
+func EqualATypes(nums1, nums2 []AType) (equal bool, index int) {
 	length := len(nums1)
 	if length != len(nums2) {
-		return
+		return false, -1
 	}
 	for i := 0; i < length; i++ {
 		if nums1[i] != nums2[i] {
-			return
+			return false, i
 		}
 	}
-	return true
+	return true, length
 }
 
 // FindAType returns the first index of the given value in the slice of
@@ -100,4 +102,3 @@ func FindAType(value AType, nums ...AType) (index int, found bool) {
 	}
 	return
 }
-

@@ -34,7 +34,7 @@ Features
 * Minimum and maximum (with indices)
 * Sum
 * Fill
-* Equality
+* Equality (with first differing index)
 * Find
 
 

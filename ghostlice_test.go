@@ -100,15 +100,19 @@ func Test_EqualInts(t *T) {
 	intsCopy := make([]int, len(ints))
 	copy(intsCopy, ints)
 	intsCopy[len(intsCopy)-1] = 88
-	// Test cases
-	// False cases: empty vs. non, len diff, content diff, last element diff
-	ints1 := [][]int{emptyInts, ints[:1], ints, emptyInts, ints[:5], ints[:2], ints}
-	ints2 := [][]int{emptyInts, ints[:1], ints, ints[:1], ints[:7], ints[1:3], intsCopy}
-	equals := []bool{true, true, true, false, false, false, false}
+	// Test cases.  False cases: empty vs. non, len diff, first element
+	// diff, middle element diff, last element diff
+	ints1 := [][]int{emptyInts, ints[:1], ints, emptyInts, ints[:5], ints[2:7], ints[5:9], ints}
+	ints2 := [][]int{emptyInts, ints[:1], ints, ints[:1], ints[:7], ints[3:8], ints[8:12], intsCopy}
+	equals := []bool{true, true, true, false, false, false, false, false}
+	indices := []int{0, 1, 37, -1, -1, 0, 1, 36}
 	for test := 0; test < len(equals); test++ {
-		equality := EqualInts(ints1[test], ints2[test])
+		equality, index := EqualInts(ints1[test], ints2[test])
 		if equality != equals[test] {
-			t.Errorf("Wrong equality at %v: expected %v != %v", test, equals[test], equality)
+			t.Errorf("Wrong equality in test %v: expected %v != %v", test, equals[test], equality)
+		}
+		if index != indices[test] {
+			t.Errorf("Wrong index in test %v: expected %v != %v", test, indices[test], index)
 		}
 	}
 }
@@ -121,10 +125,10 @@ func Test_FindInt(t *T) {
 	for test := 0; test < len(testData); test++ {
 		index, found := FindInt(targets[test], testData[test]...)
 		if index != expectedIndexes[test] {
-			t.Errorf("Wrong index finding %v: expected %v != %v", targets[test], expectedIndexes[test], index)
+			t.Errorf("Wrong index in test %v: expected %v != %v", targets[test], expectedIndexes[test], index)
 		}
 		if found != expectedFounds[test] {
-			t.Errorf("Wrong found finding %v: expected %v != %v", targets[test], expectedFounds[test], found)
+			t.Errorf("Wrong found in test %v: expected %v != %v", targets[test], expectedFounds[test], found)
 		}
 	}
 }
