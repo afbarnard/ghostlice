@@ -144,3 +144,51 @@ func Test_Float64sFromInts(t *T) {
 		}
 	}
 }
+
+func Test_AddIntsSc(t *T) {
+	testData := [][]int{emptyInts, ints[:10]}
+	expected := [][]int{{}, {9, -57, 100, -31, 40, 89, 74, 47, 89, 49}}
+	for test := 0; test < len(testData); test++ {
+		actual := AddIntsSc(7, testData[test]...)
+		equal, index := EqualInts(expected[test], actual)
+		if !equal {
+			t.Errorf("Sums not equal in test %v, element %v: expected %v != %v", test, index, expected[test][index], actual[index])
+		}
+	}
+}
+
+func Test_SubIntsSc(t *T) {
+	testData := [][]int{emptyInts, ints[:10]}
+	expected := [][]int{{}, {-9, -75, 82, -49, 22, 71, 56, 29, 71, 31}}
+	for test := 0; test < len(testData); test++ {
+		actual := SubIntsSc(11, testData[test]...)
+		equal, index := EqualInts(expected[test], actual)
+		if !equal {
+			t.Errorf("Differences not equal in test %v, element %v: expected %v != %v", test, index, expected[test][index], actual[index])
+		}
+	}
+}
+
+func Test_MulIntsSc(t *T) {
+	testData := [][]int{emptyInts, ints[:10]}
+	expected := [][]int{{}, {-10, 320, -465, 190, -165, -410, -335, -200, -410, -210}}
+	for test := 0; test < len(testData); test++ {
+		actual := MulIntsSc(-5, testData[test]...)
+		equal, index := EqualInts(expected[test], actual)
+		if !equal {
+			t.Errorf("Products not equal in test %v, element %v: expected %v != %v", test, index, expected[test][index], actual[index])
+		}
+	}
+}
+
+func Test_DivIntsSc(t *T) {
+	testData := [][]int{emptyInts, ints[:10]}
+	expected := [][]int{{}, {0, -9, 13, -5, 4, 11, 9, 5, 11, 6}}
+	for test := 0; test < len(testData); test++ {
+		actual := DivIntsSc(7, testData[test]...)
+		equal, index := EqualInts(expected[test], actual)
+		if !equal {
+			t.Errorf("Quotients not equal in test %v, element %v: expected %v != %v", test, index, expected[test][index], actual[index])
+		}
+	}
+}

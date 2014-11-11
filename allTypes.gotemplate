@@ -114,3 +114,44 @@ func Float64sFromATypes(nums ...AType) (floats []float64) {
 	return
 }
 
+// AddATypesSc adds the given number (scalar) to each element
+func AddATypesSc(addend AType, nums ...AType) (sums []AType) {
+	length := len(nums)
+	sums = make([]AType, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubATypesSc subtracts the given number (scalar) from each element
+func SubATypesSc(subtrahend AType, nums ...AType) (differences []AType) {
+	length := len(nums)
+	differences = make([]AType, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulATypesSc multiplies each element by the given number (scalar)
+func MulATypesSc(multiplier AType, nums ...AType) (products []AType) {
+	length := len(nums)
+	products = make([]AType, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivATypesSc divides each element by the given number (scalar)
+func DivATypesSc(divisor AType, nums ...AType) (quotients []AType) {
+	length := len(nums)
+	quotients = make([]AType, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+

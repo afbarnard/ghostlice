@@ -111,6 +111,47 @@ func Float64sFromUint8s(nums ...uint8) (floats []float64) {
 	return
 }
 
+// AddUint8sSc adds the given number (scalar) to each element
+func AddUint8sSc(addend uint8, nums ...uint8) (sums []uint8) {
+	length := len(nums)
+	sums = make([]uint8, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubUint8sSc subtracts the given number (scalar) from each element
+func SubUint8sSc(subtrahend uint8, nums ...uint8) (differences []uint8) {
+	length := len(nums)
+	differences = make([]uint8, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulUint8sSc multiplies each element by the given number (scalar)
+func MulUint8sSc(multiplier uint8, nums ...uint8) (products []uint8) {
+	length := len(nums)
+	products = make([]uint8, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivUint8sSc divides each element by the given number (scalar)
+func DivUint8sSc(divisor uint8, nums ...uint8) (quotients []uint8) {
+	length := len(nums)
+	quotients = make([]uint8, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinUint16s finds the minimum of a slice of uint16s and its index
 func MinUint16s(nums ...uint16) (min uint16, index int) {
 	if len(nums) == 0 {
@@ -215,6 +256,47 @@ func Float64sFromUint16s(nums ...uint16) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddUint16sSc adds the given number (scalar) to each element
+func AddUint16sSc(addend uint16, nums ...uint16) (sums []uint16) {
+	length := len(nums)
+	sums = make([]uint16, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubUint16sSc subtracts the given number (scalar) from each element
+func SubUint16sSc(subtrahend uint16, nums ...uint16) (differences []uint16) {
+	length := len(nums)
+	differences = make([]uint16, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulUint16sSc multiplies each element by the given number (scalar)
+func MulUint16sSc(multiplier uint16, nums ...uint16) (products []uint16) {
+	length := len(nums)
+	products = make([]uint16, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivUint16sSc divides each element by the given number (scalar)
+func DivUint16sSc(divisor uint16, nums ...uint16) (quotients []uint16) {
+	length := len(nums)
+	quotients = make([]uint16, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
@@ -327,6 +409,47 @@ func Float64sFromUint32s(nums ...uint32) (floats []float64) {
 	return
 }
 
+// AddUint32sSc adds the given number (scalar) to each element
+func AddUint32sSc(addend uint32, nums ...uint32) (sums []uint32) {
+	length := len(nums)
+	sums = make([]uint32, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubUint32sSc subtracts the given number (scalar) from each element
+func SubUint32sSc(subtrahend uint32, nums ...uint32) (differences []uint32) {
+	length := len(nums)
+	differences = make([]uint32, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulUint32sSc multiplies each element by the given number (scalar)
+func MulUint32sSc(multiplier uint32, nums ...uint32) (products []uint32) {
+	length := len(nums)
+	products = make([]uint32, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivUint32sSc divides each element by the given number (scalar)
+func DivUint32sSc(divisor uint32, nums ...uint32) (quotients []uint32) {
+	length := len(nums)
+	quotients = make([]uint32, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinUint64s finds the minimum of a slice of uint64s and its index
 func MinUint64s(nums ...uint64) (min uint64, index int) {
 	if len(nums) == 0 {
@@ -431,6 +554,47 @@ func Float64sFromUint64s(nums ...uint64) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddUint64sSc adds the given number (scalar) to each element
+func AddUint64sSc(addend uint64, nums ...uint64) (sums []uint64) {
+	length := len(nums)
+	sums = make([]uint64, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubUint64sSc subtracts the given number (scalar) from each element
+func SubUint64sSc(subtrahend uint64, nums ...uint64) (differences []uint64) {
+	length := len(nums)
+	differences = make([]uint64, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulUint64sSc multiplies each element by the given number (scalar)
+func MulUint64sSc(multiplier uint64, nums ...uint64) (products []uint64) {
+	length := len(nums)
+	products = make([]uint64, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivUint64sSc divides each element by the given number (scalar)
+func DivUint64sSc(divisor uint64, nums ...uint64) (quotients []uint64) {
+	length := len(nums)
+	quotients = make([]uint64, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
@@ -543,6 +707,47 @@ func Float64sFromUints(nums ...uint) (floats []float64) {
 	return
 }
 
+// AddUintsSc adds the given number (scalar) to each element
+func AddUintsSc(addend uint, nums ...uint) (sums []uint) {
+	length := len(nums)
+	sums = make([]uint, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubUintsSc subtracts the given number (scalar) from each element
+func SubUintsSc(subtrahend uint, nums ...uint) (differences []uint) {
+	length := len(nums)
+	differences = make([]uint, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulUintsSc multiplies each element by the given number (scalar)
+func MulUintsSc(multiplier uint, nums ...uint) (products []uint) {
+	length := len(nums)
+	products = make([]uint, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivUintsSc divides each element by the given number (scalar)
+func DivUintsSc(divisor uint, nums ...uint) (quotients []uint) {
+	length := len(nums)
+	quotients = make([]uint, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinInt8s finds the minimum of a slice of int8s and its index
 func MinInt8s(nums ...int8) (min int8, index int) {
 	if len(nums) == 0 {
@@ -647,6 +852,47 @@ func Float64sFromInt8s(nums ...int8) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddInt8sSc adds the given number (scalar) to each element
+func AddInt8sSc(addend int8, nums ...int8) (sums []int8) {
+	length := len(nums)
+	sums = make([]int8, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubInt8sSc subtracts the given number (scalar) from each element
+func SubInt8sSc(subtrahend int8, nums ...int8) (differences []int8) {
+	length := len(nums)
+	differences = make([]int8, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulInt8sSc multiplies each element by the given number (scalar)
+func MulInt8sSc(multiplier int8, nums ...int8) (products []int8) {
+	length := len(nums)
+	products = make([]int8, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivInt8sSc divides each element by the given number (scalar)
+func DivInt8sSc(divisor int8, nums ...int8) (quotients []int8) {
+	length := len(nums)
+	quotients = make([]int8, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
@@ -759,6 +1005,47 @@ func Float64sFromInt16s(nums ...int16) (floats []float64) {
 	return
 }
 
+// AddInt16sSc adds the given number (scalar) to each element
+func AddInt16sSc(addend int16, nums ...int16) (sums []int16) {
+	length := len(nums)
+	sums = make([]int16, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubInt16sSc subtracts the given number (scalar) from each element
+func SubInt16sSc(subtrahend int16, nums ...int16) (differences []int16) {
+	length := len(nums)
+	differences = make([]int16, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulInt16sSc multiplies each element by the given number (scalar)
+func MulInt16sSc(multiplier int16, nums ...int16) (products []int16) {
+	length := len(nums)
+	products = make([]int16, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivInt16sSc divides each element by the given number (scalar)
+func DivInt16sSc(divisor int16, nums ...int16) (quotients []int16) {
+	length := len(nums)
+	quotients = make([]int16, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinInt32s finds the minimum of a slice of int32s and its index
 func MinInt32s(nums ...int32) (min int32, index int) {
 	if len(nums) == 0 {
@@ -863,6 +1150,47 @@ func Float64sFromInt32s(nums ...int32) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddInt32sSc adds the given number (scalar) to each element
+func AddInt32sSc(addend int32, nums ...int32) (sums []int32) {
+	length := len(nums)
+	sums = make([]int32, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubInt32sSc subtracts the given number (scalar) from each element
+func SubInt32sSc(subtrahend int32, nums ...int32) (differences []int32) {
+	length := len(nums)
+	differences = make([]int32, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulInt32sSc multiplies each element by the given number (scalar)
+func MulInt32sSc(multiplier int32, nums ...int32) (products []int32) {
+	length := len(nums)
+	products = make([]int32, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivInt32sSc divides each element by the given number (scalar)
+func DivInt32sSc(divisor int32, nums ...int32) (quotients []int32) {
+	length := len(nums)
+	quotients = make([]int32, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
@@ -975,6 +1303,47 @@ func Float64sFromInt64s(nums ...int64) (floats []float64) {
 	return
 }
 
+// AddInt64sSc adds the given number (scalar) to each element
+func AddInt64sSc(addend int64, nums ...int64) (sums []int64) {
+	length := len(nums)
+	sums = make([]int64, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubInt64sSc subtracts the given number (scalar) from each element
+func SubInt64sSc(subtrahend int64, nums ...int64) (differences []int64) {
+	length := len(nums)
+	differences = make([]int64, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulInt64sSc multiplies each element by the given number (scalar)
+func MulInt64sSc(multiplier int64, nums ...int64) (products []int64) {
+	length := len(nums)
+	products = make([]int64, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivInt64sSc divides each element by the given number (scalar)
+func DivInt64sSc(divisor int64, nums ...int64) (quotients []int64) {
+	length := len(nums)
+	quotients = make([]int64, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinInts finds the minimum of a slice of ints and its index
 func MinInts(nums ...int) (min int, index int) {
 	if len(nums) == 0 {
@@ -1079,6 +1448,47 @@ func Float64sFromInts(nums ...int) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddIntsSc adds the given number (scalar) to each element
+func AddIntsSc(addend int, nums ...int) (sums []int) {
+	length := len(nums)
+	sums = make([]int, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubIntsSc subtracts the given number (scalar) from each element
+func SubIntsSc(subtrahend int, nums ...int) (differences []int) {
+	length := len(nums)
+	differences = make([]int, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulIntsSc multiplies each element by the given number (scalar)
+func MulIntsSc(multiplier int, nums ...int) (products []int) {
+	length := len(nums)
+	products = make([]int, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivIntsSc divides each element by the given number (scalar)
+func DivIntsSc(divisor int, nums ...int) (quotients []int) {
+	length := len(nums)
+	quotients = make([]int, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
@@ -1191,6 +1601,47 @@ func Float64sFromFloat32s(nums ...float32) (floats []float64) {
 	return
 }
 
+// AddFloat32sSc adds the given number (scalar) to each element
+func AddFloat32sSc(addend float32, nums ...float32) (sums []float32) {
+	length := len(nums)
+	sums = make([]float32, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubFloat32sSc subtracts the given number (scalar) from each element
+func SubFloat32sSc(subtrahend float32, nums ...float32) (differences []float32) {
+	length := len(nums)
+	differences = make([]float32, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulFloat32sSc multiplies each element by the given number (scalar)
+func MulFloat32sSc(multiplier float32, nums ...float32) (products []float32) {
+	length := len(nums)
+	products = make([]float32, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivFloat32sSc divides each element by the given number (scalar)
+func DivFloat32sSc(divisor float32, nums ...float32) (quotients []float32) {
+	length := len(nums)
+	quotients = make([]float32, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
+	}
+	return
+}
+
 // MinFloat64s finds the minimum of a slice of float64s and its index
 func MinFloat64s(nums ...float64) (min float64, index int) {
 	if len(nums) == 0 {
@@ -1295,6 +1746,47 @@ func Float64sFromFloat64s(nums ...float64) (floats []float64) {
 	floats = make([]float64, length)
 	for i := 0; i < length; i++ {
 		floats[i] = float64(nums[i])
+	}
+	return
+}
+
+// AddFloat64sSc adds the given number (scalar) to each element
+func AddFloat64sSc(addend float64, nums ...float64) (sums []float64) {
+	length := len(nums)
+	sums = make([]float64, length)
+	for i := 0; i < length; i++ {
+		sums[i] = nums[i] + addend
+	}
+	return
+}
+
+// SubFloat64sSc subtracts the given number (scalar) from each element
+func SubFloat64sSc(subtrahend float64, nums ...float64) (differences []float64) {
+	length := len(nums)
+	differences = make([]float64, length)
+	for i := 0; i < length; i++ {
+		differences[i] = nums[i] - subtrahend
+	}
+	return
+}
+
+// MulFloat64sSc multiplies each element by the given number (scalar)
+func MulFloat64sSc(multiplier float64, nums ...float64) (products []float64) {
+	length := len(nums)
+	products = make([]float64, length)
+	for i := 0; i < length; i++ {
+		products[i] = nums[i] * multiplier
+	}
+	return
+
+}
+
+// DivFloat64sSc divides each element by the given number (scalar)
+func DivFloat64sSc(divisor float64, nums ...float64) (quotients []float64) {
+	length := len(nums)
+	quotients = make([]float64, length)
+	for i := 0; i < length; i++ {
+		quotients[i] = nums[i] / divisor
 	}
 	return
 }
