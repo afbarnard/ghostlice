@@ -67,10 +67,11 @@ func SumUint8s(nums ...uint8) (sum uint8) {
 }
 
 // FillUint8s fills a slice of uint8s with a given value
-func FillUint8s(nums []uint8, value uint8) {
+func FillUint8s(nums []uint8, value uint8) []uint8 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualUint8s compares two slices of uint8s for equality of contents
@@ -216,10 +217,11 @@ func SumUint16s(nums ...uint16) (sum uint16) {
 }
 
 // FillUint16s fills a slice of uint16s with a given value
-func FillUint16s(nums []uint16, value uint16) {
+func FillUint16s(nums []uint16, value uint16) []uint16 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualUint16s compares two slices of uint16s for equality of contents
@@ -365,10 +367,11 @@ func SumUint32s(nums ...uint32) (sum uint32) {
 }
 
 // FillUint32s fills a slice of uint32s with a given value
-func FillUint32s(nums []uint32, value uint32) {
+func FillUint32s(nums []uint32, value uint32) []uint32 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualUint32s compares two slices of uint32s for equality of contents
@@ -514,10 +517,11 @@ func SumUint64s(nums ...uint64) (sum uint64) {
 }
 
 // FillUint64s fills a slice of uint64s with a given value
-func FillUint64s(nums []uint64, value uint64) {
+func FillUint64s(nums []uint64, value uint64) []uint64 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualUint64s compares two slices of uint64s for equality of contents
@@ -663,10 +667,11 @@ func SumUints(nums ...uint) (sum uint) {
 }
 
 // FillUints fills a slice of uints with a given value
-func FillUints(nums []uint, value uint) {
+func FillUints(nums []uint, value uint) []uint {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualUints compares two slices of uints for equality of contents
@@ -812,10 +817,11 @@ func SumInt8s(nums ...int8) (sum int8) {
 }
 
 // FillInt8s fills a slice of int8s with a given value
-func FillInt8s(nums []int8, value int8) {
+func FillInt8s(nums []int8, value int8) []int8 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualInt8s compares two slices of int8s for equality of contents
@@ -961,10 +967,11 @@ func SumInt16s(nums ...int16) (sum int16) {
 }
 
 // FillInt16s fills a slice of int16s with a given value
-func FillInt16s(nums []int16, value int16) {
+func FillInt16s(nums []int16, value int16) []int16 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualInt16s compares two slices of int16s for equality of contents
@@ -1110,10 +1117,11 @@ func SumInt32s(nums ...int32) (sum int32) {
 }
 
 // FillInt32s fills a slice of int32s with a given value
-func FillInt32s(nums []int32, value int32) {
+func FillInt32s(nums []int32, value int32) []int32 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualInt32s compares two slices of int32s for equality of contents
@@ -1259,10 +1267,11 @@ func SumInt64s(nums ...int64) (sum int64) {
 }
 
 // FillInt64s fills a slice of int64s with a given value
-func FillInt64s(nums []int64, value int64) {
+func FillInt64s(nums []int64, value int64) []int64 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualInt64s compares two slices of int64s for equality of contents
@@ -1408,10 +1417,11 @@ func SumInts(nums ...int) (sum int) {
 }
 
 // FillInts fills a slice of ints with a given value
-func FillInts(nums []int, value int) {
+func FillInts(nums []int, value int) []int {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualInts compares two slices of ints for equality of contents
@@ -1557,10 +1567,11 @@ func SumFloat32s(nums ...float32) (sum float32) {
 }
 
 // FillFloat32s fills a slice of float32s with a given value
-func FillFloat32s(nums []float32, value float32) {
+func FillFloat32s(nums []float32, value float32) []float32 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualFloat32s compares two slices of float32s for equality of contents
@@ -1706,10 +1717,11 @@ func SumFloat64s(nums ...float64) (sum float64) {
 }
 
 // FillFloat64s fills a slice of float64s with a given value
-func FillFloat64s(nums []float64, value float64) {
+func FillFloat64s(nums []float64, value float64) []float64 {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualFloat64s compares two slices of float64s for equality of contents

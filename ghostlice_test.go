@@ -87,7 +87,10 @@ func Test_FillInts(t *T) {
 	fills := []int{0, -48}
 	for test := 0; test < len(sizes); test++ {
 		nums := make([]int, sizes[test])
-		FillInts(nums, fills[test])
+		filled := FillInts(nums, fills[test])
+		if equal, _ := EqualInts(filled, nums); !equal {
+			t.Error("Wrong fill: Returned slice is not the same as the original slice.")
+		}
 		min, max, _, _ := MinMaxInts(nums...)
 		if min != fills[test] || max != fills[test] {
 			t.Errorf("Wrong fill: expected %v != (%v or %v)", fills[test], min, max)

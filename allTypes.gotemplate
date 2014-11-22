@@ -70,10 +70,11 @@ func SumATypes(nums ...AType) (sum AType) {
 }
 
 // FillATypes fills a slice of ATypes with a given value
-func FillATypes(nums []AType, value AType) {
+func FillATypes(nums []AType, value AType) []AType {
 	for i := range nums {
 		nums[i] = value
 	}
+	return nums
 }
 
 // EqualATypes compares two slices of ATypes for equality of contents
