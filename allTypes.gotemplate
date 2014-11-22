@@ -79,8 +79,15 @@ func FillATypes(nums []AType, value AType) []AType {
 
 // EqualATypes compares two slices of ATypes for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualATypes(nums1, nums2 []AType) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1

@@ -99,16 +99,32 @@ func Test_FillInts(t *T) {
 }
 
 func Test_EqualInts(t *T) {
+	// Find out if a zero-value slice or an empty slice equals nil.
+	// (The language specification says the value of an uninitialized
+	// slice is nil, but is that the same as the zero value?)
+	//
+	// Results:
+	// zero-value slice == nil
+	// empty slice != nil
+	if *new([]int) != nil {
+		t.Error("Unexpected: Zero-value slice does not equal nil.")
+	}
+	if make([]int, 0) == nil {
+		t.Error("Unexpected: Empty slice equals nil.")
+	}
 	// Make a slice with the same contents except the last
 	intsCopy := make([]int, len(ints))
 	copy(intsCopy, ints)
 	intsCopy[len(intsCopy)-1] = 88
 	// Test cases.  False cases: empty vs. non, len diff, first element
 	// diff, middle element diff, last element diff
-	ints1 := [][]int{emptyInts, ints[:1], ints, emptyInts, ints[:5], ints[2:7], ints[5:9], ints}
-	ints2 := [][]int{emptyInts, ints[:1], ints, ints[:1], ints[:7], ints[3:8], ints[8:12], intsCopy}
-	equals := []bool{true, true, true, false, false, false, false, false}
-	indices := []int{0, 1, 37, -1, -1, 0, 1, 36}
+	ints1 := [][]int{nil, emptyInts, ints[:1], ints,
+		nil, emptyInts, ints[:5], ints[2:7], ints[5:9], ints}
+	ints2 := [][]int{nil, emptyInts, ints[:1], ints,
+		emptyInts, ints[:1], ints[:7], ints[3:8], ints[8:12], intsCopy}
+	equals := []bool{true, true, true, true,
+		false, false, false, false, false, false}
+	indices := []int{0, 0, 1, 37, -2, -1, -1, 0, 1, 36}
 	for test := 0; test < len(equals); test++ {
 		equality, index := EqualInts(ints1[test], ints2[test])
 		if equality != equals[test] {

@@ -76,8 +76,15 @@ func FillUint8s(nums []uint8, value uint8) []uint8 {
 
 // EqualUint8s compares two slices of uint8s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualUint8s(nums1, nums2 []uint8) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -226,8 +233,15 @@ func FillUint16s(nums []uint16, value uint16) []uint16 {
 
 // EqualUint16s compares two slices of uint16s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualUint16s(nums1, nums2 []uint16) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -376,8 +390,15 @@ func FillUint32s(nums []uint32, value uint32) []uint32 {
 
 // EqualUint32s compares two slices of uint32s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualUint32s(nums1, nums2 []uint32) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -526,8 +547,15 @@ func FillUint64s(nums []uint64, value uint64) []uint64 {
 
 // EqualUint64s compares two slices of uint64s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualUint64s(nums1, nums2 []uint64) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -676,8 +704,15 @@ func FillUints(nums []uint, value uint) []uint {
 
 // EqualUints compares two slices of uints for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualUints(nums1, nums2 []uint) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -826,8 +861,15 @@ func FillInt8s(nums []int8, value int8) []int8 {
 
 // EqualInt8s compares two slices of int8s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualInt8s(nums1, nums2 []int8) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -976,8 +1018,15 @@ func FillInt16s(nums []int16, value int16) []int16 {
 
 // EqualInt16s compares two slices of int16s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualInt16s(nums1, nums2 []int16) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -1126,8 +1175,15 @@ func FillInt32s(nums []int32, value int32) []int32 {
 
 // EqualInt32s compares two slices of int32s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualInt32s(nums1, nums2 []int32) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -1276,8 +1332,15 @@ func FillInt64s(nums []int64, value int64) []int64 {
 
 // EqualInt64s compares two slices of int64s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualInt64s(nums1, nums2 []int64) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -1426,8 +1489,15 @@ func FillInts(nums []int, value int) []int {
 
 // EqualInts compares two slices of ints for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualInts(nums1, nums2 []int) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -1576,8 +1646,15 @@ func FillFloat32s(nums []float32, value float32) []float32 {
 
 // EqualFloat32s compares two slices of float32s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualFloat32s(nums1, nums2 []float32) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
@@ -1726,8 +1803,15 @@ func FillFloat64s(nums []float64, value float64) []float64 {
 
 // EqualFloat64s compares two slices of float64s for equality of contents
 // and returns the index of the first difference or -1 if the lengths
-// differ
+// differ (or -2 if one of the slices is nil)
 func EqualFloat64s(nums1, nums2 []float64) (equal bool, index int) {
+	// Handle nil
+	if nums1 == nil && nums2 == nil {
+		return true, 0
+	} else if nums1 == nil || nums2 == nil {
+		return false, -2
+	}
+	// Handle non-nil slices
 	length := len(nums1)
 	if length != len(nums2) {
 		return false, -1
