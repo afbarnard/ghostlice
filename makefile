@@ -8,5 +8,5 @@ ghostlice.go: genCode.sh allTypes.gotemplate
 	bash $^ > $@
 
 # Runs unit tests
-test:
+test: ghostlice.go
 	go test
